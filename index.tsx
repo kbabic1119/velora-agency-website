@@ -9,6 +9,12 @@ if (!rootElement) {
 }
 
 const root = ReactDOM.createRoot(rootElement);
+const debug = document.getElementById('error-display');
+if (debug) {
+  debug.style.display = 'block';
+  debug.style.background = 'rgba(0, 255, 0, 0.5)';
+  debug.innerHTML += '<div>DEBUG: React starting...</div>';
+}
 root.render(
   <React.StrictMode>
     <App />
